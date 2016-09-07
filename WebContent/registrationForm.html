@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+
+<script>
+
+function validateForm() {
+    var x = document.forms["myForm"]["firstName"].value;
+    if (x == null || x == "") {
+        alert("First name must be filled out");
+        return false;
+        
+    }
+    var e = document.forms["myForm"]["lastName"].value;
+    if (e == null || e == "") {
+        alert("Last name must be filled out");
+        return false;
+    }
+}
+</script>
+</head>
+<body>
+
+<form action="studentAnswers.jsp" ></form>
+
+<h4>Grant Chirpus' Code Dojo</h4>
+
+<!--  validate that they enter text-->
+
+<!--  validate that they enter no numbers-->
+ 
+	<form name="myForm" action="studentAnswers.jsp" onsubmit="return validateForm()" method="post">
+	First Name: <input type="text" name="firstName" />
+	Last Name: <input type="text" name="lastName" />
+	
+	<br/><br/>
+	
+	Do you have any previous experience programming?
+	
+	<br/><br/>
+	
+	<input type="checkbox" name="experience" value="yes"> yes
+	<input type="checkbox" name="experience" value="no"> no
+	
+	<br/><br/>
+	
+	Favorite Programming Language:  <br/><br/>
+	
+	<input type="radio" name="favoriteLanguage" value="Java"> Java
+	<input type="radio" name="favoriteLanguage" value="C#"> C#
+	<input type="radio" name="favoriteLanguage" value=".Net"> .Net
+	<input type="radio" name="favoriteLanguage" value="Ruby"> Ruby
+	<input type="radio" name="favoriteLanguage" value="PHP"> PHP
+	
+	<br/><br/>
+	 
+	<input type="submit" value="submit" />
+
+</form>
+
+  
+</body>
+</html>
